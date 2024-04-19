@@ -12,4 +12,3 @@ telecom_df = pd.read_csv("telecom_customer_churn.csv")
 print(telecom_df.head())
 print(telecom_df.shape)
 print(telecom_df.columns)
-
