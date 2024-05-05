@@ -4,13 +4,13 @@
 This project explores a dataset of telecommunications customers to uncover patterns that signal whether customers are likely to discontinue their services. Utilizing a variety of data science methods and machine learning models, this analysis delivers crucial insights into the factors influencing customer churn and suggests ways to mitigate it.
 
 ## 2. Dataset
-The dataset, `telecom_customer_churn.csv`, comprises several customer attributes including monthly charges, contract duration, and whether an international plan is subscribed. 
+The dataset, [Telecom Customer Churn](./telecom_customer_churn.csv), comprises several customer attributes including monthly charges, contract duration, and whether an international plan is subscribed. 
 
-An initial exploration of this dataset is captured in `data_summary.txt`, obtained from [Kaggle](https://www.kaggle.com/datasets/mnassrib/telecom-churn-datasets/data?select=churn-bigml-20.csv).
+An initial exploration of this dataset is captured in [Data Summary](./data_summary.txt), obtained from [Kaggle](https://www.kaggle.com/datasets/mnassrib/telecom-churn-datasets/data?select=churn-bigml-20.csv).
 
 ### 2.1 Dats summary
 
-The `data_summary.txt` file provides a comprehensive overview of the telecom dataset, detailing essential attributes such as the number of rows (customers) and columns (features). This document reveals significant aspects such as:
+The [Data Summary](./data_summary.txt) file provides a comprehensive overview of the telecom dataset, detailing essential attributes such as the number of rows (customers) and columns (features). This document reveals significant aspects such as:
 - **Data Types and Null Values**: By outlining the data types and null value counts, this summary helps identify columns that may require preprocessing, such as filling missing values or converting data types for better analysis compatibility.
 - **Initial Insights**: The first five rows preview typical entries, providing a snapshot of the customer base, including varied demographics and service usage patterns. This initial look can help hypothesize about potential factors influencing churn, such as service type or customer demographics.
 - **Foundation for Deeper Analysis**: Understanding the basic structure and content of the dataset is crucial for setting up more detailed data cleaning procedures and preparing for in-depth exploratory data analysis and feature engineering.
@@ -40,7 +40,7 @@ The histogram  delves into how international plans affect churn rates, suggestin
 ## 4. Models
 Three predictive models were developed: Logistic Regression, Random Forest, and Naive Bayes, each tested for their ability to predict customer churn.
 
-### 4.1 [Detailed Model Performance](./detailed_model_performance.txt)
+### 4.1 Detailed Model Performance
 
 The performance evaluations detailed in [Detailed Model Performance](./detailed_model_performance.txt) reveal nuanced insights:
 
