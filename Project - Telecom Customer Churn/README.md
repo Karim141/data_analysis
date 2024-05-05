@@ -6,26 +6,33 @@ This project explores a dataset of telecommunications customers to uncover patte
 ## 2. Dataset
 The dataset, `telecom_customer_churn.csv`, comprises several customer attributes including monthly charges, contract duration, and whether an international plan is subscribed. An initial exploration of this dataset is captured in `data_summary.txt`, obtained from [Kaggle](https://www.kaggle.com/datasets/mnassrib/telecom-churn-datasets/data?select=churn-bigml-20.csv).
 
-### 2.1 data_summary.txt
-The ![data_summary.txt](./data_summary.txt) file offers a concise overview of the dataset, detailing the number of rows and columns, the data types of each column, and an excerpt of the first five rows. These preliminary details provide a snapshot of the data structure.
+### 2.1 Dats summary
+
+![data_summary.txt](./data_summary.txt)
+
+The file offers a concise overview of the dataset, detailing the number of rows and columns, the data types of each column, and an excerpt of the first five rows. These preliminary details provide a snapshot of the data structure.
 
 ## 3. Visualizations
 Several visualizations have been developed to deeply analyze various aspects of the dataset.
 
 ### 3.1 Dataset Distributions
-![dataset_distributions.png](./dataset_distributions.png) This visualization illustrates the distribution of all numeric features within the dataset, helping identify data scaling needs, potential outliers, and normalization requirements.
+
+![dataset_distributions.png](./dataset_distributions.png) 
+
+This visualization illustrates the distribution of all numeric features within the dataset, helping identify data scaling needs, potential outliers, and normalization requirements.
 
 ### 3.2 Churn Distribution Pie Chart
-The pie chart ![churn_distribution_pie_chart.png](./churn_distribution_pie_chart.png) visually expresses the proportion of customers who have churned versus those who have stayed. It offers a rapid assessment of the churn rate, essential for understanding the scope of customer retention challenges.
+
+ ![churn_distribution_pie_chart.png](./churn_distribution_pie_chart.png) 
+
+The pie chart visually expresses the proportion of customers who have churned versus those who have stayed. It offers a rapid assessment of the churn rate, essential for understanding the scope of customer retention challenges.
 
 ### 3.3 International Plan Distribution
-The histogram ![international_plan_distribution.png](./international_plan_distribution.png) delves into how international plans affect churn rates, suggesting that customers with such plans might display a higher churn rate due to additional costs or service expectations.
 
-### 3.4 Pairplots
-The pairplots ![pairplot.png](./pairplot.png) provide a detailed look at the interactions between various features, with colors helping to quickly spot correlations and trends.
+![international_plan_distribution.png](./international_plan_distribution.png) 
 
-### 3.5 ROC Curves Comparison
-The ROC curves ![roc_curves_comparison.png](./roc_curves_comparison.png) depict the effectiveness of each trained model in distinguishing between churned and retained customers, crucial for assessing model performance.
+The histogram  delves into how international plans affect churn rates, suggesting that customers with such plans might display a higher churn rate due to additional costs or service expectations.
+
 
 ## 4. Models
 Three predictive models were developed: Logistic Regression, Random Forest, and Naive Bayes, each tested for their ability to predict customer churn.
@@ -37,6 +44,12 @@ The detailed performance evaluations of these models are documented in ![detaile
 - **Naive Bayes** had a lower performance in precision and recall compared to the other models, suggesting it might miss more cases of churn or falsely predict churn where there is none.
 
 These metrics are critical in determining which models are most useful for deploying in real-world scenarios to reduce churn effectively.
+
+### 4.2 ROC Curves Comparison
+
+ ![roc_curves_comparison.png](./roc_curves_comparison.png) 
+
+The ROC curves depict the effectiveness of each trained model in distinguishing between churned and retained customers, crucial for assessing model performance.
 
 ## 5. Interpretations and Conclusions
 The analysis clearly reveals that specific features like international plans and monthly charges significantly correlate with customer churn. Customers with international plans are particularly prone to churn, likely due to dissatisfaction with the cost or the service provided. 
