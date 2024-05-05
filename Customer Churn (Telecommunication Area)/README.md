@@ -50,7 +50,7 @@ Similar to day charges, evening charges also show a trend where higher costs cor
 
 ### 3.6 Distribution of Charges by State
 
-![State Churn Distribution](./state_churn_distribution.png)
+![State Churn Distribution](./files/state_churn_distribution.png)
 
 Churn rates vary significantly across states, revealing geographical patterns in customer satisfaction and service effectiveness. States with high churn rates might benefit from localized marketing strategies and possibly service enhancements to address specific regional needs or competitive pressures.
 
