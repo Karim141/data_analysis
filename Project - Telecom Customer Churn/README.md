@@ -42,7 +42,7 @@ Three predictive models were developed: Logistic Regression, Random Forest, and 
 
 ### 4.1 [Detailed Model Performance](./detailed_model_performance.txt)
 
-The performance evaluations detailed in `detailed_model_performance.txt` reveal nuanced insights:
+The performance evaluations detailed in [Detailed Model Performance](./detailed_model_performance.txt) reveal nuanced insights:
 
 - **Logistic Regression**: Although it shows moderate overall effectiveness with an AUC of approximately 0.80, it excels in identifying the significant predictors of churn. Its precision of 75% indicates its strength in accurately predicting churn when it does occur, but a recall of 60% points to missed cases of churn. This model is particularly useful for initial screenings and providing a baseline understanding of feature impacts.
 
