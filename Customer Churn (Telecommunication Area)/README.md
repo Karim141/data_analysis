@@ -86,6 +86,6 @@ The analysis clearly reveals that specific features like international plans and
 
 Based on the insights obtained, it is recommended that telecommunications companies:
 
-**Pricing Strategy Overhaul**: Telecom companies should consider restructuring their pricing models to be more competitive and aligned with customer expectations, especially for high-churn services.
+- **Pricing Strategy Overhaul**: Telecom companies should consider restructuring their pricing models to be more competitive and aligned with customer expectations, especially for high-churn services.
 - **Targeted Customer Retention Programs**: Utilizing the insights from the Random Forest model, develop personalized retention programs aimed at high-risk customer segments, possibly offering customized plans or loyalty incentives.
 - **Enhanced Customer Service in High-Churn States**: Focus on improving customer service in states with high churn rates by addressing common complaints and enhancing service reliability.
