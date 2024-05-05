@@ -37,8 +37,8 @@ The histogram  delves into how international plans affect churn rates, suggestin
 ## 4. Models
 Three predictive models were developed: Logistic Regression, Random Forest, and Naive Bayes, each tested for their ability to predict customer churn.
 
-### 4.1 detailed_model_performance.txt
-The detailed performance evaluations of these models are documented in ![detailed_model_performance.txt](./detailed_model_performance.txt). Notably, the Random Forest model showcased the highest AUC, indicating superior performance in distinguishing between customers who churn and those who do not. Here’s a breakdown of the performance:
+### 4.1 Detailed Model Performance
+The detailed performance evaluations of these models are documented in ![Detailed Model Perfromance](./detailed_model_performance.txt). Notably, the Random Forest model showcased the highest AUC, indicating superior performance in distinguishing between customers who churn and those who do not. Here’s a breakdown of the performance:
 - **Logistic Regression** showed a precision of 75%, suggesting that when it predicts churn, it is correct 75% of the time. However, its recall of 60% indicates it only identifies 60% of all actual churn cases.
 - **Random Forest** exhibited both high precision and recall, indicating it not only accurately predicts churn but also covers a larger proportion of actual churn cases, making it highly reliable for targeted interventions.
 - **Naive Bayes** had a lower performance in precision and recall compared to the other models, suggesting it might miss more cases of churn or falsely predict churn where there is none.
