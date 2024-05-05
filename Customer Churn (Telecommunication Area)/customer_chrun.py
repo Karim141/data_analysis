@@ -18,7 +18,7 @@ from sklearn.metrics import roc_curve, roc_auc_score, classification_report
 pd.set_option('display.max_columns', None)
 
 # Load the dataset
-telecom_df = pd.read_csv("telecom_customer_churn.csv")
+telecom_df = pd.read_csv("files/telecom_customer_churn.csv")
 
 # Output basic information about the dataset
 print(telecom_df.info())
@@ -102,6 +102,59 @@ fig.update_layout(
 fig.update_traces(textposition='outside')
 fig.write_image('international_plan_distribution.png')
 
+# Correlation Matrix
+corr_matrix = telecom_df.corr()
+plt.figure(figsize=(15, 15))
+sns.heatmap(corr_matrix, annot=True, fmt="0.2f")
+plt.title("Correlation Matrix of Telecom Customers", fontsize=20)
+plt.savefig('correlation_matrix.png')
+
+# Analysing churn by day charges
+retain_data = telecom_df[telecom_df["class"] == 0]["total_day_charge"]
+churn_data = telecom_df[telecom_df["class"] == 1]["total_day_charge"]
+
+plt.figure(figsize=(10, 6))
+sns.kdeplot(retain_data, color="red", fill=True, label="Retain")
+sns.kdeplot(churn_data, color="blue", fill=True, label="Churn")
+plt.legend()
+plt.xlabel("Day Charges")
+plt.ylabel("Density")
+plt.title("Distribution of Day Charges by Churn")
+plt.savefig('day_charges_distribution.png')
+
+# Analysing churn by evening charges
+retain_data = telecom_df[telecom_df["class"] == 0]["total_eve_charge"]
+churn_data = telecom_df[telecom_df["class"] == 1]["total_eve_charge"]
+
+plt.figure(figsize=(10, 6))
+sns.kdeplot(retain_data, color="red", fill=True, label="Retain")
+sns.kdeplot(churn_data, color="blue", fill=True, label="Churn")
+plt.legend()
+plt.xlabel("Evening Charges")
+plt.ylabel("Density")
+plt.title("Distribution of Evening Charges by Churn")
+plt.savefig('evening_charges_distribution.png')
+
+# Cross-table of state and churn
+crossvar_city_churn = pd.crosstab(index=telecom_df['state'], columns=telecom_df['class'])
+crossvar_city_churn = crossvar_city_churn.sort_values(by=1, ascending=False)
+
+mask = telecom_df['class'] == 1
+
+fig, ax = plt.subplots(figsize=(13, 9))
+colors = ['purple', 'orange']
+legend = ['No-Churn', 'Churn']
+crossvar_city_churn.plot(kind='bar', alpha=0.7, color=colors, width=0.6, edgecolor='black', ax=ax, legend=True)
+ax.set_xlabel(' ')
+ax.set_ylabel('Share of cities %', fontsize=12, weight='bold')
+ax.set_title('Total customers\' churn/ no-churn in the states', fontsize=12, weight='bold')
+ax.set_xticklabels(crossvar_city_churn.index, rotation=45, ha='right', fontsize=8, weight='bold')
+ax.legend(legend, fontsize=8, loc='upper left')
+ax.text(s=f'Total customers: {telecom_df.shape[0]} and Total churn in the states: {telecom_df.loc[mask].shape[0]}',
+        x=25, y=120, color='black', weight='bold', alpha=0.9, fontsize=10)
+ax.yaxis.grid(which='major', linestyle='dashed', color='gray')
+plt.savefig('state_churn_distribution.png')
+
 # Preparing data for model training
 X = telecom_df.drop('class', axis=1)
 y = telecom_df['class']
@@ -144,5 +197,4 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.legend(loc='lower right')
 plt.savefig('roc_curves_comparison.png')
-plt.show()
 

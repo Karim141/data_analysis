@@ -36,6 +36,29 @@ The pie chart visually expresses the proportion of customers who have churned ve
 
 The histogram  delves into how international plans affect churn rates, suggesting that customers with such plans might display a higher churn rate due to additional costs or service expectations.
 
+### 3.4 Distribution of Day Charges
+
+![Day Charges Distribution](./files/day_charges_distribution.png)
+
+This visualization shows a clear distinction in day charge distributions between customers who retain and those who churn. Higher day charges are consistently associated with increased churn rates, indicating that pricing strategies could be directly impacting customer retention. This suggests that revising day charge rates or introducing more flexible pricing plans could potentially reduce churn.
+
+### 3.5 Distribution of Evening Charges
+
+![Evening Charges Distribution](./files/evening_charges_distribution.png)
+
+Similar to day charges, evening charges also show a trend where higher costs correlate with higher churn. This pattern underscores the need for a pricing review during peak hours to enhance customer satisfaction and loyalty.
+
+### 3.6 Distribution of Charges by State
+
+![State Churn Distribution](./state_churn_distribution.png)
+
+Churn rates vary significantly across states, revealing geographical patterns in customer satisfaction and service effectiveness. States with high churn rates might benefit from localized marketing strategies and possibly service enhancements to address specific regional needs or competitive pressures.
+
+### 3.7 Correlation Matrix
+
+![Correlation Matrix](./files/correlation_matrix.png)
+
+The correlation matrix reveals strong correlations between features like `voice_mail_plan` and `number_vmail_messages`, and `total_day_charge` and `total_daily_minutes`. These insights suggest that redundant information might be inflating the predictive models' complexity unnecessarily. Simplifying the model by removing or combining these correlated features could lead to more efficient and interpretable results.
 
 ## 4. Models
 Three predictive models were developed: Logistic Regression, Random Forest, and Naive Bayes, each tested for their ability to predict customer churn.
@@ -63,6 +86,6 @@ The analysis clearly reveals that specific features like international plans and
 
 Based on the insights obtained, it is recommended that telecommunications companies:
 
-- Reevaluate the pricing and benefits of international plans to align better with customer expectations, thus enhancing satisfaction and reducing churn.
-- Implement targeted retention strategies that leverage the predictive power of the Random Forest model to identify and intervene with high-risk customers before they churn.
-- Consider customer feedback from churned customers, especially those with international plans, to adjust services and improve customer satisfaction metrics.
+**Pricing Strategy Overhaul**: Telecom companies should consider restructuring their pricing models to be more competitive and aligned with customer expectations, especially for high-churn services.
+- **Targeted Customer Retention Programs**: Utilizing the insights from the Random Forest model, develop personalized retention programs aimed at high-risk customer segments, possibly offering customized plans or loyalty incentives.
+- **Enhanced Customer Service in High-Churn States**: Focus on improving customer service in states with high churn rates by addressing common complaints and enhancing service reliability.
