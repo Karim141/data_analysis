@@ -1,0 +1,33 @@
+Logistic Regression Model Performance:
+              precision    recall  f1-score   support
+
+ Not Churned       0.89      0.97      0.93       861
+     Churned       0.59      0.24      0.35       139
+
+    accuracy                           0.87      1000
+   macro avg       0.74      0.61      0.64      1000
+weighted avg       0.85      0.87      0.85      1000
+
+
+Random Forest Model Performance:
+              precision    recall  f1-score   support
+
+ Not Churned       0.96      0.99      0.98       861
+     Churned       0.95      0.75      0.84       139
+
+    accuracy                           0.96      1000
+   macro avg       0.95      0.87      0.91      1000
+weighted avg       0.96      0.96      0.96      1000
+
+
+Naive Bayes Model Performance:
+              precision    recall  f1-score   support
+
+ Not Churned       0.93      0.90      0.91       861
+     Churned       0.47      0.56      0.51       139
+
+    accuracy                           0.85      1000
+   macro avg       0.70      0.73      0.71      1000
+weighted avg       0.86      0.85      0.86      1000
+
+
