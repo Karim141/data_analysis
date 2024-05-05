@@ -1,4 +1,4 @@
-# Telecommunication Customer Churn Analysis
+# Telecommunication Customer Churn Prediction
 
 ## 1. Project Overview
 This project explores a dataset of telecommunications customers to uncover patterns that signal whether customers are likely to discontinue their services. Utilizing a variety of data science methods and machine learning models, this analysis delivers crucial insights into the factors influencing customer churn and suggests ways to mitigate it.
