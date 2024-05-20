@@ -101,10 +101,3 @@ sns.boxplot(x=non_cancelled_orders['Quantity'])
 plt.title('Boxplot for Detecting Outliers in Quantities')
 plt.savefig('boxplot_for_detecting_outliers_in_quantities.png')  # Save the figure
 plt.show()
-
-# Conclusions
-print("\nConclusions from the exploratory data analysis:")
-print("1. The data show a wide variety in product types and sales patterns.")
-print("2. Seasonal trends and customer segments provide valuable insights for strategic decisions.")
-print("3. Sales volume varies significantly by days and countries, indicating market potentials.")
-print("4. The analysis of price elasticity could help develop optimal pricing strategies.")
