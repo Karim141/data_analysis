@@ -87,3 +87,15 @@ CREATE TABLE Transactions (
     FOREIGN KEY (CustomerCart_CustomerID) REFERENCES Customer_Cart(CustomerName),
     FOREIGN KEY (Cashier_CashierID) REFERENCES Cashier(CashierID)
 );
+
+## Data Import
+
+The initial data can be imported using the following CSV files in the data directory:
+
+brand_has_product.csv
+brand.csv
+cashier.csv
+categories.csv
+customer_cart.csv
+products.csv
+transactions.csv
