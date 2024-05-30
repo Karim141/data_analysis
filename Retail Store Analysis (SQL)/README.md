@@ -98,13 +98,13 @@ CREATE TABLE Transactions (
 
 The initial data can be imported using the following CSV files in the data directory:
 
-brand_has_product.csv
-brand.csv
-cashier.csv
-categories.csv
-customer_cart.csv
-products.csv
-transactions.csv
+- brand_has_product.csv
+- brand.csv
+- cashier.csv
+- categories.csv
+- customer_cart.csv
+- products.csv
+- transactions.csv
 
 ## Retail Store Analysis
 
